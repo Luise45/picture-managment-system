@@ -1,5 +1,9 @@
 ## Picture Management System
 
+### start 
+uvicorn main:app --reload
+npm run dev
+
 ### Tech Stack
 - Photo storage - OneDrive
 - Database - PostgreSQL
