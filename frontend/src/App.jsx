@@ -4,9 +4,12 @@ function App() {
   const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/photos/")
+    fetch("http://localhost:8000/photos")
       .then((response) => response.json())
-      .then((data) => setPhotos(data));
+      .then((data) => {
+        console.log(data);
+        setPhotos(data);
+      });
   }, []);
 
   return (

@@ -18,7 +18,7 @@ def get_db():
     finally:
         db.close()
 
-
+# endpoint to get all photos
 @router.get("/")
 def get_photos(db: Session = Depends(get_db)):
     return db.query(Photo).all()
